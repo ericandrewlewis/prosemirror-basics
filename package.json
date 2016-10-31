@@ -1,0 +1,24 @@
+{
+  "name": "prosemirror-basics",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "prosemirror-example-setup": "^0.12.0",
+    "prosemirror-menu": "^0.12.0",
+    "prosemirror-model": "^0.12.0",
+    "prosemirror-schema-basic": "^0.12.0",
+    "prosemirror-schema-list": "^0.12.0",
+    "prosemirror-state": "^0.12.0",
+    "prosemirror-view": "^0.12.0",
+    "watchify": "^3.7.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

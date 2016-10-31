@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf8>
+    <link rel=stylesheet href="node_modules/prosemirror-view/style/prosemirror.css">
+    <link rel=stylesheet href="node_modules/prosemirror-menu/style/menu.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <style>
+    .editor-wrapper {
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+    }
+
+    td.selected {
+      background-color: #fec30b;
+    }
+
+    .panel-with-border {
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>ProseMirror Basics</h1>
+      <h2>A bare bones "editor"</h2>
+      <p>An editor can be quite basic. Here is an editor that accepts text input and that's about it.</p>
+      <div class="editor-1 editor-wrapper"></div>
+      <p>Key bindings for Delete and Enter are in a plugin.</p>
+      <p>Undo, redo and history are in a plugin.</p>
+
+      <h2>The basic setup</h2>
+      <p>Marijn put together a "basic setup," which includes what you might expect to find in a text editor: a schema, a toolbar menu, undo history, keyboard shortcuts and magic input rules. </p>
+      <div class="editor-2 editor-wrapper"></div>
+      <div class="editor-2-content"></div>
+
+      <h2>The document structure</h2>
+      <p>An editor's document is a recursive node tree.</p>
+      <p>Each node can have attributes (eg. a heading has an attribute describing its level).</p>
+      <p>Nodes can contain text. Text is split into separate nodes based on their applied marks (eg. strong, emphasized or linked text).</p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="editor-3 editor-wrapper"></div>
+        </div>
+        <div class="col-md-6">
+          <pre class="editor-3-doc panel-with-border"></pre>
+        </div>
+      </div>
+      <div class="editor-3-content">Check <strong>this out</strong>.</div>
+
+      <h2>Positions</h2>
+      <p>Positions are considered as integer offsets in the document.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="editor-4 editor-wrapper"></div>
+        </div>
+        <pre class="col-md-6">
+          <div class="panel-with-border" style="overflow: hidden; overflow-x: scroll;">
+            <div class="editor-4-selection-position-info"></div>
+            <table class="editor-4-position-info"></table>
+          </div>
+        </pre>
+      </div>
+      <div class="editor-4-content">Check <strong>this out</strong>.</div>
+
+      <h2></h2>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
